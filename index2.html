@@ -46,22 +46,26 @@
             <button onclick="dispnum(4)">4</button>
             <button onclick="dispnum(5)">5</button>
             <button onclick="dispnum(6)">6</button>
-            <button >x</button>
-            <button >&#247;</button><br>
+            c<button onclick="operationclick('x')">x</button>
+            <button onclick="operationclick('/')">/</button>
             <button onclick="dispnum(1)">1</button>
             <button onclick="dispnum(2)">2</button>
             <button onclick="dispnum(3)">3</button>
-            <button >+</button>
-            <button >-</button><br>
+            <button onclick="operationclick('-')">-</button>
+            <button onclick="operationclick('+')">+</button>
             <button onclick="dispnum(7)">0</button>
             <button >.</button>
             <button >x10<sup>X</sup></button>
             <button >Ans</button>
-            <button >=</button>
+            <button onclick="result()" >=</button>
+
         </div>
     </div>
     <script>
         var operation = "";
+        var current=0;
+        var  prev=0;
+        var result=0;
         function dispnum(n)
         {
             var op = document.getElementById('res').value;
@@ -70,8 +74,37 @@
         }
         function operationclick(temp)
         {
-            
+            operation=temp;
+            current=document.getElementById('res').value;
+            document.getElementById('res').value="";
         }
+        function result()
+        {
+            prev=document.getElementById('res').value;
+            switch (operation) {
+        case '+':
+            result = prev + current;
+            break;
+        case '-':
+            result = prev - current;
+            break;
+        case '*':
+            result = prev * current;
+            break;
+        case '/':
+            if (current === 0) {
+                alert("Cannot divide by zero");
+                return;
+            }
+            result = prev / current;
+            break;
+        default:
+            return;
+    }
+    document.getElementById('res')=result;
+
+        }
+        
     </script>
 </body>
 </html>
