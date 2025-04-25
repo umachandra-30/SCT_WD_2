@@ -8,27 +8,39 @@
         <div class="container1">
             <input type="text" id="display" class="display" disabled><br>
             <div class="buttons">
-                <button class="button clear" onclick="clearDisplay()">C</button>
-                <button class="button operation" onclick="appendoperation('/')">/</button>
-                <button class="button operation" onclick="appendoperation('*')">*</button>
-                <button class="button operation" onclick="appendoperation('-')">-</button><br>
+                <button onclick="squareRoot()">sqrt</button>
+                <button onclick="sin()">sin</button>
+                <button onclick="cos()">cos</button>
+                <button onclick="sec()">sec</button>
+                <button onclick="tan()">tan</button>
+                <button onclick="log()">log</button>
+                <button  class="cosec"onclick="cosec()">cosec</button>
+                <button onclick="appendoperation('^')">^</button>
                 <button class="button operation" onclick="appendnumber('7')">7</button>
                 <button class="button operation" onclick="appendnumber('8')">8</button>
                 <button class="button operation" onclick="appendnumber('9')">9</button>
-                <button class="button operation" onclick="appendoperation('+')">+</button><br>
+                <button class="buttonclear" onclick="clearDisplay()">DEL</button>
                 <button class="button operation" onclick="appendnumber('4')">4</button>
                 <button class="button operation" onclick="appendnumber('5')">5</button>
                 <button class="button operation" onclick="appendnumber('6')">6</button>
-                <button class="button equal" onclick="calculate()">=</button><br>
+                <button class="buttonoperation1" onclick="appendoperation('*')">*</button>
                 <button class="button operation" onclick="appendnumber('1')">1</button>
                 <button class="button operation" onclick="appendnumber('2')">2</button>
                 <button class="button operation" onclick="appendnumber('3')">3</button>
+                <button class="buttonoperation1" onclick="appendoperation('/')">/</button>
                 <button class="button operation" onclick="appendnumber('0')">0</button>
-
-
-
-
+                <button class="buttonoperation1" onclick="appendoperation('+')">+</button>
+                <button class="buttonoperation1" onclick="appendoperation('-')">-</button>
+                <button class="buttonequal" onclick="calculate()">=</button>
+               
             </div>
         </div>
+        <script src="calci.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+        integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+</script>
+
     </body>
 </html>
