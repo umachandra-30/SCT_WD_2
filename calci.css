@@ -6,6 +6,10 @@ body {
     height: 100vh;
     margin: 0;
 }
+@font-face {
+    font-family: digital-7;
+    src: url('digital-7.ttf');
+}
 
 .container1 {
     background-color:grey;
@@ -29,12 +33,14 @@ body {
     padding: 10px;
     box-sizing: border-box;
     background-color: transparent;
+    font-family: digital-7;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+
 }
 button {
     background-color: #333333;
@@ -44,6 +50,7 @@ button {
     font-size: 1.2em;
     box-shadow: 0 0 5px #00ffff55;
     transition: 0.3s;
+    font-family: digital-7;
 
 }
 .button:hover {
@@ -73,3 +80,18 @@ h2{
 {
     background-color: #00C853;
 }
+.glow {
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 1px 1px 10px gold
+    , 1px 1px 10px red;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    font-family: troika;
+  }
+  @font-face {
+    font-family: troika;
+    src: url('troika.otf');
+  }
