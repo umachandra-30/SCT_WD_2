@@ -99,10 +99,6 @@ function sin() {
     if (currentinput === '') return;
 
     let number = parseFloat(currentinput);
-    if (number < 0) {
-        alert("Cannot take square root of a negative number");
-        return;
-    }
 
     let result = Math.sin(number);
     currentinput = result.toString();
@@ -115,10 +111,6 @@ function cos() {
     if (currentinput === '') return;
 
     let number = parseFloat(currentinput);
-    if (number < 0) {
-        alert("Cannot take square root of a negative number");
-        return;
-    }
 
     let result = Math.cos(number);
     currentinput = result.toString();
@@ -131,10 +123,6 @@ function tan() {
     if (currentinput === '') return;
 
     let number = parseFloat(currentinput);
-    if (number < 0) {
-        alert("Cannot take square root of a negative number");
-        return;
-    }
 
     let result = Math.tan(number);
     currentinput = result.toString();
@@ -147,11 +135,6 @@ function sec() {
     if (currentinput === '') return;
 
     let number = parseFloat(currentinput);
-    if (number < 0) {
-        alert("Cannot take square root of a negative number");
-        return;
-    }
-
     let result = 1/Math.cos(number);
     currentinput = result.toString();
     previnput = '';
@@ -163,11 +146,6 @@ function cosec() {
     if (currentinput === '') return;
 
     let number = parseFloat(currentinput);
-    if (number < 0) {
-        alert("Cannot take square root of a negative number");
-        return;
-    }
-
     let result = 1/Math.sin(number);
     currentinput = result.toString();
     previnput = '';
@@ -179,11 +157,6 @@ function log() {
     if (currentinput === '') return;
 
     let number = parseFloat(currentinput);
-    if (number < 0) {
-        alert("Cannot take square root of a negative number");
-        return;
-    }
-
     let result = Math.log(number);
     currentinput = result.toString();
     previnput = '';
